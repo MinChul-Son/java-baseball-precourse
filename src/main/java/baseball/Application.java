@@ -15,10 +15,15 @@ public class Application {
         System.out.println("안녕하세요! 야구 게임을 시작합니다.");
         System.out.println("3자리 숫자를 입력해주세요.");
         while (true) {
-            String userInput = Console.readLine();
+            String playerInput = Console.readLine();
             BaseballChecker baseballChecker = new BaseballChecker();
 
-            if (baseballChecker.ballCounter(computer.number, userInput)) {
+            if (!verifyPlayerInput(playerInput)) {
+                System.out.println("[ERROR] : 잘못된 입력값입니다! 다시 입력해주세요!");
+                continue;
+            }
+
+            if (baseballChecker.ballCounter(computer.number, playerInput)) {
                 System.out.println("3스트라이크");
                 System.out.println("3개의 숫자를 모두 맞췄습니다! 게임종료");
                 isFin = again();
@@ -51,5 +56,9 @@ public class Application {
         }
 
         return false;
+    }
+
+    private static boolean verifyPlayerInput(final String playerInput) {
+        return playerInput.chars().allMatch(Character::isDigit);
     }
 }
