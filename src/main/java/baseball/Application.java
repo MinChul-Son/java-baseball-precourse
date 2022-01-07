@@ -45,11 +45,11 @@ public class Application {
                 computer = new Computer(START_NUMBER, END_NUMBER);
                 continue;
             }
+
             break;
         }
 
         System.out.println("게임 끝!");
-
 
     }
 
@@ -64,6 +64,17 @@ public class Application {
     }
 
     private static boolean verifyPlayerInput(final String playerInput) {
-        return playerInput.chars().allMatch(Character::isDigit);
+        // 1. 숫자인지 검증
+
+        if (!playerInput.chars().allMatch(Character::isDigit)) {
+            return false;
+        }
+
+        // 2. 입력값 길이 검증
+        if (playerInput.length() > 3) {
+            return false;
+        }
+
+        return true;
     }
 }
