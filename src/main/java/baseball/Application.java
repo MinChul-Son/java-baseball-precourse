@@ -2,13 +2,13 @@ package baseball;
 
 import nextstep.utils.Console;
 
+import static java.lang.String.*;
+
 public class Application {
 
     private static final int ZERO = 0;
     private static final int START_NUMBER = 1;
     private static final int END_NUMBER = 9;
-    private static final String STRIKE = "스트라이크";
-    private static final String BALL = "볼";
 
     public static void main(String[] args) {
         boolean isFin = false;
@@ -29,14 +29,14 @@ public class Application {
             }
 
             if (baseballChecker.ballCounter(computer.number, playerInput)) {
-                System.out.println(baseballChecker.strike + STRIKE);
+                System.out.println(baseballChecker.strike + valueOf(Result.스트라이크));
                 System.out.println("3개의 숫자를 모두 맞췄습니다! 게임종료");
                 isFin = again();
             } else if (baseballChecker.ball == ZERO && baseballChecker.strike == ZERO) {
-                System.out.println("낫싱");
+                System.out.println(Result.낫싱);
                 continue;
             } else {
-                System.out.println(baseballChecker.strike + STRIKE + " " + baseballChecker.ball + BALL);
+                System.out.println(baseballChecker.strike + Result.스트라이크.toString() + " " + baseballChecker.ball + (Result.볼));
                 continue;
             }
 
