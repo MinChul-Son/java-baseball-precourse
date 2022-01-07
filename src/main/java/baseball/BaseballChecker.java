@@ -36,4 +36,9 @@ public class BaseballChecker {
 
         return false;
     }
+
+    public void resetCounter() {
+        this.ball = ZERO;
+        this.strike = ZERO;
+    }
 }
