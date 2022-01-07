@@ -14,6 +14,7 @@ public class Application {
         boolean isFin = false;
 
         Computer computer = new Computer(START_NUMBER, END_NUMBER);
+        BaseballChecker baseballChecker = new BaseballChecker();
 
         System.out.println("안녕하세요! 야구 게임을 시작합니다.");
         System.out.println("3자리 숫자를 입력해주세요.");
@@ -21,7 +22,6 @@ public class Application {
         while (true) {
             Player player = new Player();
             String playerInput = player.generatePlayerInput();
-            BaseballChecker baseballChecker = new BaseballChecker();
 
             if (!verifyPlayerInput(playerInput)) {
                 System.out.println("[ERROR] : 잘못된 입력값입니다! 다시 입력해주세요!");
