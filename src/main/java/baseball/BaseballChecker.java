@@ -17,6 +17,7 @@ public class BaseballChecker {
     public boolean ballCounter(final String computer, final String player) {
         // 정답! - 얼리 리턴
         if (computer.equals(player)) {
+            strike = 3;
             return true;
         }
 

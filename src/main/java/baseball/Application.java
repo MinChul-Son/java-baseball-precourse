@@ -26,7 +26,7 @@ public class Application {
             }
 
             if (baseballChecker.ballCounter(computer.number, playerInput)) {
-                System.out.println("3스트라이크");
+                System.out.println(baseballChecker.strike + "스트라이크");
                 System.out.println("3개의 숫자를 모두 맞췄습니다! 게임종료");
                 isFin = again();
             } else if (baseballChecker.ball == ZERO && baseballChecker.strike == ZERO) {
