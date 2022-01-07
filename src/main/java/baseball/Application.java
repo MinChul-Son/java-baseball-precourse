@@ -2,7 +2,7 @@ package baseball;
 
 import nextstep.utils.Console;
 
-import static java.lang.String.*;
+import static java.lang.String.valueOf;
 
 public class Application {
 
