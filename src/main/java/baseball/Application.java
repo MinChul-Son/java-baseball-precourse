@@ -43,6 +43,7 @@ public class Application {
             if (isFin) {
                 System.out.println("게임을 다시 시작합니다!");
                 computer = new Computer(START_NUMBER, END_NUMBER);
+                baseballChecker.resetCounter();
                 continue;
             }
 
@@ -54,18 +55,19 @@ public class Application {
     }
 
     private static boolean again() {
+
         System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요");
 
         if (Console.readLine().equals("1")) {
             return true;
         }
-
         return false;
+
     }
 
     private static boolean verifyPlayerInput(final String playerInput) {
-        // 1. 숫자인지 검증
 
+        // 1. 숫자인지 검증
         if (!playerInput.chars().allMatch(Character::isDigit)) {
             return false;
         }
@@ -77,4 +79,5 @@ public class Application {
 
         return true;
     }
+
 }
