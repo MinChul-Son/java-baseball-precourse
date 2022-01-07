@@ -4,6 +4,7 @@ import nextstep.utils.Console;
 
 public class Application {
 
+    private static final int ZERO = 0;
     private static final int START_NUMBER = 1;
     private static final int END_NUMBER = 9;
 
@@ -28,7 +29,7 @@ public class Application {
                 System.out.println("3스트라이크");
                 System.out.println("3개의 숫자를 모두 맞췄습니다! 게임종료");
                 isFin = again();
-            } else if (baseballChecker.ball == 0 && baseballChecker.strike == 0) {
+            } else if (baseballChecker.ball == ZERO && baseballChecker.strike == ZERO) {
                 System.out.println("낫싱");
                 continue;
             } else {
