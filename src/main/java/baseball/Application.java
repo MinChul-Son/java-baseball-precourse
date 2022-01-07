@@ -7,6 +7,8 @@ public class Application {
     private static final int ZERO = 0;
     private static final int START_NUMBER = 1;
     private static final int END_NUMBER = 9;
+    private static final String STRIKE = "스트라이크";
+    private static final String BALL = "볼";
 
     public static void main(String[] args) {
         boolean isFin = false;
@@ -15,6 +17,7 @@ public class Application {
 
         System.out.println("안녕하세요! 야구 게임을 시작합니다.");
         System.out.println("3자리 숫자를 입력해주세요.");
+
         while (true) {
             Player player = new Player();
             String playerInput = player.generatePlayerInput();
@@ -26,14 +29,14 @@ public class Application {
             }
 
             if (baseballChecker.ballCounter(computer.number, playerInput)) {
-                System.out.println(baseballChecker.strike + "스트라이크");
+                System.out.println(baseballChecker.strike + STRIKE);
                 System.out.println("3개의 숫자를 모두 맞췄습니다! 게임종료");
                 isFin = again();
             } else if (baseballChecker.ball == ZERO && baseballChecker.strike == ZERO) {
                 System.out.println("낫싱");
                 continue;
             } else {
-                System.out.println(baseballChecker.strike + "스트라이크 " + baseballChecker.ball + "볼 ");
+                System.out.println(baseballChecker.strike + STRIKE + " " + baseballChecker.ball + BALL);
                 continue;
             }
 
