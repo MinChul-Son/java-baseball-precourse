@@ -2,11 +2,12 @@ package baseball;
 
 public class BaseballChecker {
 
+    private final static int ZERO = 0;
+    private final static int LAST_INDEX = 3;
+
     protected int ball;
     protected int strike;
 
-    private final static int ZERO = 0;
-    private final static int LAST_INDEX = 3;
 
     public BaseballChecker() {
         this.ball = ZERO;
