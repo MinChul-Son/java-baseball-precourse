@@ -5,8 +5,8 @@ public class BaseballChecker {
     private final static int ZERO = 0;
     private final static int LAST_INDEX = 3;
 
-    protected int ball;
-    protected int strike;
+    private int ball;
+    private int strike;
 
 
     public BaseballChecker() {
@@ -14,6 +14,13 @@ public class BaseballChecker {
         this.strike = ZERO;
     }
 
+    public int getBall() {
+        return ball;
+    }
+
+    public int getStrike() {
+        return strike;
+    }
 
     public boolean ballCounter(final String computer, final String player) {
         // 정답! - 얼리 리턴

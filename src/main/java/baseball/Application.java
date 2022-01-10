@@ -28,7 +28,7 @@ public class Application {
                 continue;
             }
 
-            baseballChecker.ballCounter(computer.number, playerInput);
+            baseballChecker.ballCounter(computer.getNumber(), playerInput);
 
             if (!checkBallCount(baseballChecker)) {
                 baseballChecker.resetCounter();
@@ -72,19 +72,19 @@ public class Application {
     }
 
     private static boolean checkBallCount(final BaseballChecker baseballChecker) {
-        if (baseballChecker.strike == FULL_COUNT) {
-            System.out.println(baseballChecker.strike + valueOf(Result.스트라이크));
+        if (baseballChecker.getStrike() == FULL_COUNT) {
+            System.out.println(baseballChecker.getStrike() + valueOf(Result.스트라이크));
             System.out.println("3개의 숫자를 모두 맞췄습니다! 게임종료");
             return true;
         }
 
-        if (baseballChecker.ball == ZERO && baseballChecker.strike == ZERO) {
+        if (baseballChecker.getBall() == ZERO && baseballChecker.getStrike() == ZERO) {
             System.out.println(Result.낫싱);
             return false;
         }
 
 
-        System.out.println(baseballChecker.strike + Result.스트라이크.toString() + " " + baseballChecker.ball + (Result.볼));
+        System.out.println(baseballChecker.getStrike() + Result.스트라이크.toString() + " " + baseballChecker.getBall() + (Result.볼));
         return false;
     }
 

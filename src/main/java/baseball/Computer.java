@@ -7,10 +7,14 @@ import java.util.List;
 
 public class Computer {
 
-    protected String number;
+    private String number;
 
     public Computer(final int start, final int end) {
         this.number = generateRandomNumber(start, end);
+    }
+
+    public String getNumber() {
+        return number;
     }
 
     private String generateRandomNumber(final int start, final int end) {
