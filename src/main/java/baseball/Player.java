@@ -7,4 +7,5 @@ public class Player {
     public String generatePlayerInput() {
         return Console.readLine();
     }
+
 }

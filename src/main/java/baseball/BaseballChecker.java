@@ -31,9 +31,7 @@ public class BaseballChecker {
             if (computer.indexOf(player.substring(extractIndex, extractIndex + 1)) >= 0) {
                 ball++;
             }
-
         }
-
         return false;
     }
 
@@ -41,4 +39,5 @@ public class BaseballChecker {
         this.ball = ZERO;
         this.strike = ZERO;
     }
+
 }

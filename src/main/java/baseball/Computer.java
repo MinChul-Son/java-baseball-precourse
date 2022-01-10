@@ -25,7 +25,6 @@ public class Computer {
             if (uniqueNumberList.contains(randomNumber)) {
                 continue;
             }
-
             uniqueNumberList.add(randomNumber);
         }
 

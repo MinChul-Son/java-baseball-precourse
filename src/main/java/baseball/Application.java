@@ -45,7 +45,6 @@ public class Application {
             System.out.println("게임 끝!");
             break;
         }
-
     }
 
     private static boolean again() {
@@ -56,7 +55,6 @@ public class Application {
             return true;
         }
         return false;
-
     }
 
     private static boolean verifyPlayerInput(final String playerInput) {
@@ -70,7 +68,6 @@ public class Application {
         if (playerInput.length() > 3) {
             return false;
         }
-
         return true;
     }
 
@@ -89,7 +86,6 @@ public class Application {
 
         System.out.println(baseballChecker.strike + Result.스트라이크.toString() + " " + baseballChecker.ball + (Result.볼));
         return false;
-
     }
 
 }
