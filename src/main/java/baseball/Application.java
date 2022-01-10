@@ -47,6 +47,12 @@ public class Application {
         }
     }
 
+    /**
+     * 게임을 한번 더 하는지를 판단하는 함수
+     * 사용자의 입력값을 통해 1이면 새로 시작, 2이면 종료
+     *
+     * @return 사용자의 입력값이 1이라면 True, 2라면 False
+     */
     private static boolean again() {
 
         System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요");
@@ -57,6 +63,14 @@ public class Application {
         return false;
     }
 
+    /**
+     * 사용자의 입력값을 검증하는 함수
+     * - 숫자인지?
+     * - 3자리로 이루어졌는지?
+     *
+     * @param playerInput : 사용자의 입력값
+     * @return 입력값에 문제가 없다면 True, 문제가 있다면 False
+     */
     private static boolean verifyPlayerInput(final String playerInput) {
 
         // 1. 숫자인지 검증
@@ -71,6 +85,12 @@ public class Application {
         return true;
     }
 
+    /**
+     * BaseballChecker의 판독을 통해 결과를 출력하고 게임의 방향을 알려주는 함수
+     *
+     * @param baseballChecker : 판독 결과
+     * @return 정답을 맞췄다면 True, 오답이라면 False
+     */
     private static boolean checkBallCount(final BaseballChecker baseballChecker) {
         if (baseballChecker.getStrike() == FULL_COUNT) {
             System.out.println(baseballChecker.getStrike() + valueOf(Result.스트라이크));
