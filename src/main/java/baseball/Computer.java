@@ -13,6 +13,14 @@ public class Computer {
         this.number = generateRandomNumber(start, end);
     }
 
+    private Computer(String number) {
+        this.number = number;
+    }
+
+    public static Computer of(final String number) {
+        return new Computer(number);
+    }
+
     public String getNumber() {
         return number;
     }
